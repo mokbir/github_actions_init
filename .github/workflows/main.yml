@@ -12,11 +12,13 @@ jobs:
           run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
 
         - name: Run a one-line script number 3
-          run: echo "🚀 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+          run: |
+            echo "🚀 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
 
         - name: Branch name and repository
           run: echo " The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-        - run: echo " The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+        - run: |
+            echo " The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
         - name: Check out repository code
           uses: actions/checkout@v4
 
